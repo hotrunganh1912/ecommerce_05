@@ -1,9 +1,10 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t(".home"), home_path %></li>
-        <li><%= link_to t(".help"), help_path %></li>
+      <%= render "products/slider_search_box" %>
+      <ul class="nav navbar-nav navbar-right bd-top-index">
+        <%= render "products/cart_text" %>
+        <%= render "layouts/shim" %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <%= t(".login")%> <b class="caret"></b>

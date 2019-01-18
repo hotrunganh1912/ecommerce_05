@@ -30,6 +30,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  number:
+    currency:
+      format:
+        unit: "₫"
+        delimiter: "."  #khoan cach
+        separator: ","  #le
+        precision: 0
+        format: "%n%u" #do vi truoc/so truoc
   helper_application:
     base_title: "Ecommerce05"
   static_pages: #modules
@@ -51,4 +59,17 @@ en:
       login: "Login"
       sign_now: "Sign up now!"
       login_now: "login now!"
-
+  products:
+    product:
+      add_to_card: "Add to card"
+  carts:
+    cart_row:
+      unit_price: "Unit Price: "
+      total_price: "Total Price: "
+      update_quantity: "Update Quantity"
+      delete: "Delete"
+      confirm_delete: "Are you sure you wish to delete the product from your cart?"
+    show:
+      total_price: "Total Price: "
+    shopping_cart:
+      mess: There are no items in your shopping cart.  Please go on and add some items to your cart.
