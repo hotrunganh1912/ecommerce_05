@@ -15,6 +15,26 @@
     <% end %>
 
     <div class="field">
+      <%= f.label :sex %><br />
+      <%= f.select(:sex, User.sexes.keys.map {|sex| [sex.titleize, sex]}, :selected_value => User.sexes, class: "form-control" )%>
+    </div>
+
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, autocomplete: "name",class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address %><br />
+      <%= f.text_field :address, autocomplete: "address",class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :phone %><br />
+      <%= f.phone_field  :phone, autocomplete: "phone",class: "form-control" %>
+    </div>
+
+    <div class="field">
       <%= f.label :password %> <i><%= t(".leadve_blank") %></i><br />
       <%= f.password_field :password, autocomplete: "new-password" %>
       <% if @minimum_password_length %>

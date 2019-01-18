@@ -139,4 +139,22 @@ en:
         content2: "Your account has been locked due to an excessive number of unsuccessful sign in attempts."
         content3: "Click the link below to unlock your account:"
         link_to: "Unlock my account"
+  carts:
+    cart_row:
+      unit_price: "Unit Price: "
+      total_price: "Total Price: "
+      update_quantity: "Update Quantity"
+      delete: "Delete"
+      confirm_delete: "Are you sure you wish to delete the product from your cart?"
+    show:
+      total_price: "Total Price: "
+    shopping_cart:
+      mess: There are no items in your shopping cart.  Please go on and add some items to your cart.
+  order_details:
+    update:
+      update: "Successfully update to the cart"
+    destroy:
+      destroy: "Successfully delete to the cart "
+    create:
+      create: "Successfully add to the cart"
 

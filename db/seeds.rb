@@ -82,7 +82,7 @@ end
 end
 
 20.times do |d|
-  Product.create!(category_id: 1,
+  Product.create!(category_id: 2,
                 name: "samsung galaxy S#{d+1}",
                 description_sort:"samsung phone",
                 description_long:"new",

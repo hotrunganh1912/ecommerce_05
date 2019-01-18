@@ -1,3 +1,5 @@
 class CartsController < ApplicationController
-  def show; end
+  def show
+    @order_details = current_order.order_details
+  end
 end
