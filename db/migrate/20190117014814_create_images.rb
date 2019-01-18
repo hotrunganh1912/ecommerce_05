@@ -4,7 +4,8 @@ class CreateImages < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :products_id
 
-      t.timestamps
+      t.datetime "created_at",default: Time.now, null: false
+      t.datetime "updated_at"
     end
   end
 end

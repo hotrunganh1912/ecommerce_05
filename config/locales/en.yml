@@ -32,3 +32,23 @@
 en:
   helper_application:
     base_title: "Ecommerce05"
+  static_pages: #modules
+    help:
+      name_pages: "Help"
+    home:
+      name_pages: "Home"
+      content: "Ecommerce website"
+      content_h1: "Welcome to the Ecommerce"
+  layouts:
+    footer:
+      home: "Home"
+      help: "Help"
+      login: "Login"
+      content_small: "Project 1"
+    header:
+      home: "Home"
+      help: "Help"
+      login: "Login"
+      sign_now: "Sign up now!"
+      login_now: "login now!"
+

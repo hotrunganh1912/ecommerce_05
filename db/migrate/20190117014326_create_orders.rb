@@ -6,7 +6,8 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.integer :status, default: 0, null: false
       t.integer :close_at
 
-      t.timestamps
+      t.datetime "created_at",default: Time.now, null: false
+      t.datetime "updated_at"
     end
   end
 end

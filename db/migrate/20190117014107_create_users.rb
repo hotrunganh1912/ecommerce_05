@@ -10,7 +10,8 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :password_digest
       t.string :remember_digest
 
-      t.timestamps
+      t.datetime "created_at",default: Time.now, null: false
+      t.datetime "updated_at"
     end
   end
 end

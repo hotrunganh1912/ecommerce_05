@@ -6,7 +6,8 @@ class CreateOrdersDetails < ActiveRecord::Migration[5.2]
       t.float :price
       t.integer :quantity
 
-      t.timestamps
+      t.datetime "created_at",default: Time.now, null: false
+      t.datetime "updated_at"
     end
   end
 end
