@@ -66,6 +66,7 @@ en:
       on_of_stock: "on of stock"
     slider_search_box:
       logo: "Rails logo"
+      none: "None"
   devise:
     confirmation:
       content: "Resend confirmation instructions"
