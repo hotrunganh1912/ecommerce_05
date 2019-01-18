@@ -1,11 +1,11 @@
 # Category.delete_all
-Categorie.create! name:"Book"
-Categorie.create! name:"Phone"
-Categorie.create! name:"Car"
-Categorie.create! name:"Laptop"
+Category.create! name:"Book"
+Category.create! name:"Phone"
+Category.create! name:"Car"
+Category.create! name:"Laptop"
 
 # Product.delete_all
-Product.create!(categorie_id: 3,
+Product.create!(category_id: 3,
                 name:"car",
                 description_sort:"car",
                 description_long:"new",
@@ -50,8 +50,8 @@ Product.create!(categorie_id: 3,
     image = "car2"
     price_out="854000000"
   end
-  Product.create!(categorie_id: 3,
-                name: name,
+  Product.create!(category_id: 3,
+                name: "#{name}#{n+1}",
                 description_sort: description_sort,
                 description_long: description_long,
                 name_image: image,
@@ -66,7 +66,7 @@ Product.create!(categorie_id: 3,
 end
 
 20.times do |c|
-  Product.create!(categorie_id: 1,
+  Product.create!(category_id: 1,
                 name: "Book-#{c+1}",
                 description_sort:"Book",
                 description_long:"new",
@@ -82,11 +82,11 @@ end
 end
 
 20.times do |d|
-  Product.create!(categorie_id: 1,
+  Product.create!(category_id: 1,
                 name: "samsung galaxy S#{d+1}",
-                description_sort:"samsungphone",
+                description_sort:"samsung phone",
                 description_long:"new",
-                name_image: "samsungphone#{d+1}",
+                name_image: "samsung phone#{d+1}",
                 color:"red",
                 price_in:1000 + d,
                 price_sale:10,

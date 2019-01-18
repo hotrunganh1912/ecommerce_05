@@ -1,0 +1,5 @@
+<p><%= t".content" %><%= @email %>!</p>
+
+<p><%= t".content2" %></p>
+
+<p><%= link_to t(".text_link_to"), confirmation_url(@resource, confirmation_token: @token) %></p>
