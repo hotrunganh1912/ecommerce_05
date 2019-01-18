@@ -1,0 +1,17 @@
+<div class="shopping-cart">
+  <%= render "shopping_cart" %>
+  <h4 class="text-right"><%= t".total_price"%><span style="color: green"><%= number_to_currency current_order.total_price %></span></h4>
+</div>
+<% if @order_details.size > 0 %>
+  <div class="col-xs-12 text-right">
+    <div class="row">
+      <%= form_for current_order, method: :patch do |f| %>
+        <%= f.hidden_field :status, value: "pending" %>
+        <%= button_tag( "confirm",class: "btn btn-default") do %>
+          <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+          <span><strong>confirm</strong></span>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

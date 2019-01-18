@@ -1,0 +1,29 @@
+<div class="card-1">
+  <% if @product.in_stock? %>
+  <small class="text-success"><b><%= @product.status%></b></small>
+  <% else %>
+  <small class="text-danger"><b><strike><%= @product.status%></b></strike></small>
+  <%end %>
+
+  <div class = "col-sm-6 col-lg-4">
+    <div class="card-2">
+      <div class="div-button-card">
+        <img src= "../assets/product/<%= @product.name_image%>" alt= <%= @product.name_image%>  width="300px" height="170px">
+      </div>
+      <h1><%= @product.description_sort %></h1>
+    </div>
+  </div>
+
+  <div class = "col-sm-6 col-lg-4">
+    <div class="card-2">
+      <p class="price"><%= number_to_currency(@product.price_out, :locale => :en)%></p>
+      <p class="description-long-product" > <%= @product.description_long %></p>
+      <%= form_for OrderDetail.new do |f| %>
+      <%= f.hidden_field :quantity, value: 1, class: "form-control", min: 1 %>
+      <%= f.hidden_field :product_id, value: @product.id %>
+      <%= f.submit t(".add_to_card"), class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
