@@ -1,0 +1,4 @@
+app:
+  controller:
+    produce:
+      per_page: 9
