@@ -8,15 +8,16 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :name_image
       t.string :color
       t.string :size
-      t.string :price_in
-      t.string :price_out
-      t.string :price_sale
+      t.float :price_in
+      t.float :price_sale
+      t.float :price_out
       t.integer :status, default: 0, null: false
       t.boolean :new
       t.integer :quantity
-      t.boolean :trend
+      t.boolean :trend, default:false
 
-      t.timestamps
+      t.datetime "created_at",default: Time.now, null: false
+      t.datetime "updated_at"
     end
   end
 end

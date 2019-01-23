@@ -5,7 +5,8 @@ class CreateRatings < ActiveRecord::Migration[5.2]
       t.integer :product_id
       t.integer :value_rate
 
-      t.timestamps
+      t.datetime "created_at",default: Time.now, null: false
+      t.datetime "updated_at"
     end
   end
 end
