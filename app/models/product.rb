@@ -6,5 +6,5 @@ class Product < ApplicationRecord
   belongs_to :category
   enum status: {"in stock": 0, "out of stock": 1}
 
-  scope :product_name, ->(srch){where "name like ?", "#{srch.strip}%"}
+  scope :product_name, ->srch{where "name like ?", "#{srch.strip}%"}
 end
