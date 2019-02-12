@@ -4,4 +4,6 @@ class Product < ApplicationRecord
   has_many :images
   belongs_to :categorie
   enum status: {"in stock": 0, "out of stock": 1}
+
+  scope :newest, ->{order created_at: :DESC}
 end
