@@ -7,4 +7,5 @@ class Product < ApplicationRecord
   enum status: {"in stock": 0, "out of stock": 1}
 
   scope :product_name, ->srch{where "name like ?", "#{srch.strip}%"}
+  scope :product_trend, -> {where trend:true}
 end

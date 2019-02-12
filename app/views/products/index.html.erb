@@ -1,7 +1,11 @@
 <div class="container page-wrapper">
   <div class="page-inner">
     <div class="row">
-     <%= render @products %>
+      <% if params[:page] == "1" or params[:page].blank? %>
+      <%= render "products/hot_trending" %>
+      <% end %>
+      <h2><b>Products</b></h2>
+      <%= render @products %>
     </div>
   </div>
 </div>
