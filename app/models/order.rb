@@ -14,8 +14,8 @@ class Order < ApplicationRecord
     self[:total_price] = total_price
   end
 
-  def get_price id_product
-    products = Product.find_by(id: id_product)
+  def get_price product_id
+    products = Product.find_by(id: product_id)
     products.price_out
   end
 end
