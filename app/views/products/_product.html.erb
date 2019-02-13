@@ -10,7 +10,8 @@
     </div>
     <!-- <img src= <%= product.name_image%> alt="Denim Jeans" style="width:100%"> -->
 
-    <h1><%= product.description_sort %></h1>
+    <h1><%= link_to product.name , products_path(product) %></h1>
+
       <p class="price"><%= number_to_currency(product.price_out, :locale => :en)%></p>
       <p class="description-long-product" > <%= product.description_long %></p>
       <%= form_for @order_details do |f| %>

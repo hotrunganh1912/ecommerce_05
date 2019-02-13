@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  def show
+    @products = Product.find_by(id: params[:id])
+  end
   def index
     @products = Product.all # creates an anonymous scope
     @products = @products.product_name(params[:srch]) if params[:srch].present?

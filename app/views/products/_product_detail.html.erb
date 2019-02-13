@@ -1,0 +1,28 @@
+<div class="card-1">
+  <% if (@products.status == "in stock")%>
+  <small class="text-success"><b><%= @products.status%></b></small>
+  <% elsif (@products.status == "out of stock")%>
+  <small class="text-danger"><b><strike><%= @products.status%></b></strike></small>
+  <%end %>
+  <div class = "col-sm-6 col-lg-4">
+    <div class="card-2">
+      <div class="div-button-card">
+        <img src= "../assets/product/<%= @products.name_image%>" alt= <%= @products.name_image%>  width="300px" height="170px">
+      </div>
+      <h1><%= @products.description_sort %></h1>
+    </div>
+  </div>
+  <div class = "col-sm-6 col-lg-4">
+    <div class="card-2">
+      <p class="price"><%= number_to_currency(@products.price_out, :locale => :en)%></p>
+      <p class="description-long-product" > <%= @products.description_long %></p>
+      <%= form_for OrderDetail.new do |f| %>
+      <%= f.hidden_field :quantity, value: 1, class: "form-control", min: 1 %>
+      <%= f.hidden_field :product_id, value: @products.id %>
+      <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
