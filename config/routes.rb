@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+
+  get 'orders/show'
   root "products#index"
 
+  get "/history", to: 'orders#index'
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"

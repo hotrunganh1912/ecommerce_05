@@ -30,6 +30,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  time:
+    formats:
+      default: "%m/%d/%Y %p"
+  date:
+    formats:
+      default: "%m/%d/%Y %p"
   number:
     currency:
       format:

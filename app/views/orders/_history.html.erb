@@ -1,0 +1,5 @@
+<%if logged_in? %>
+  <%= render @orders.order_crrent_user(session[:user_id]) %>
+<%else%>
+  <h1><%= link_to "Please logged", login_path %></h1>
+<%end%>

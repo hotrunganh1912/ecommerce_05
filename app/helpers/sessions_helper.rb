@@ -40,7 +40,15 @@ module SessionsHelper
   def log_out
     forget(current_user)
     session.delete :user_id
+    session.delete :order_id
     @current_user = nil
+  end
+
+  def check_order
+    return unless current_order.total_price == 0
+    order = Order.find_by(id: current_order.id)
+    return unless order
+    order.destroy
   end
 
   def is_admin?

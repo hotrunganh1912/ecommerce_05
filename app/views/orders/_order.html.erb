@@ -1,0 +1,13 @@
+<div class="well">
+  <div class="row">
+    <div class="col-xs-8">
+      <p>status: <%= order.status %></p>
+      <p>id: <%= order.id %></p>
+    </div>
+    <div class="col-xs-4">
+    </div>
+    <h4 class="text-right"><%= t".total_price"%><span style="color: green"><%= number_to_currency order.total_price %></span></h4>
+    <p>Time: <%=  order.created_at %></p>
+
+  </div>
+</div>

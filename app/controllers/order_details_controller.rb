@@ -1,4 +1,5 @@
 class OrderDetailsController < ApplicationController
+  before_action :load_order_detail, only: [:update, :destroy]
   def create
     @order = current_order
     if @order.order_details.find_by(order_item_params_up).nil?
@@ -10,8 +11,6 @@ class OrderDetailsController < ApplicationController
   end
 
   def update
-    @order = current_order
-    @order_detail = @order.order_details.find_by(id: params[:id])
     @order_detail.update_attributes(order_item_params)
     @order.save
     flash[:success] = "Successfully update ' #{get_name_product params[:order_detail][:product_id]} ' to the cart "
@@ -20,8 +19,6 @@ class OrderDetailsController < ApplicationController
   end
 
   def destroy
-    @order = current_order
-    @order_detail = @order.order_details.find_by(id: params[:id])
     @order_detail.destroy
     @order.save
     flash[:success] = "Successfully delete to the cart "
@@ -56,5 +53,10 @@ class OrderDetailsController < ApplicationController
   def get_name_product product_id
     products = Product.find_by(id: product_id)
     products.name
+  end
+
+  def load_order_detail
+    @order = current_order
+    @order_detail = @order.order_details.find_by(id: params[:id])
   end
 end
