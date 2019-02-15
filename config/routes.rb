@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'orders/show'
+  get "orders/show"
   root "products#index"
 
-  get "/history", to: 'orders#index'
+  get "/history", to: "orders#index"
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show]
   resource :cart, only: [:show]
   resources :order_details, only: [:create, :update, :destroy]
+  resources :orders, only: [:update, :edit, :destroy , :index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

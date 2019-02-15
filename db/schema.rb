@@ -15,14 +15,14 @@ ActiveRecord::Schema.define(version: 2019_01_17_014814) do
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.integer "parent_id"
-    t.datetime "created_at", default: "2019-02-01 09:17:25", null: false
+    t.datetime "created_at", default: "2019-02-15 05:48:32", null: false
     t.datetime "updated_at"
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.integer "products_id"
-    t.datetime "created_at", default: "2019-02-01 09:17:25", null: false
+    t.datetime "created_at", default: "2019-02-15 05:48:32", null: false
     t.datetime "updated_at"
   end
 
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2019_01_17_014814) do
     t.integer "product_id"
     t.float "price"
     t.integer "quantity"
-    t.datetime "created_at", default: "2019-02-01 09:17:25", null: false
+    t.datetime "created_at", default: "2019-02-15 05:48:32", null: false
     t.datetime "updated_at"
   end
 
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2019_01_17_014814) do
     t.float "total_price"
     t.integer "status", default: 0, null: false
     t.integer "close_at"
-    t.datetime "created_at", default: "2019-02-01 09:17:25", null: false
+    t.datetime "created_at", default: "2019-02-15 05:48:32", null: false
     t.datetime "updated_at"
   end
 
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2019_01_17_014814) do
     t.boolean "new"
     t.integer "quantity"
     t.boolean "trend", default: false
-    t.datetime "created_at", default: "2019-02-01 09:17:25", null: false
+    t.datetime "created_at", default: "2019-02-15 05:48:32", null: false
     t.datetime "updated_at"
   end
 
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 2019_01_17_014814) do
     t.integer "user_id"
     t.integer "product_id"
     t.integer "value_rate"
-    t.datetime "created_at", default: "2019-02-01 09:17:25", null: false
+    t.datetime "created_at", default: "2019-02-15 05:48:32", null: false
     t.datetime "updated_at"
   end
 
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 2019_01_17_014814) do
     t.integer "role", default: 0, null: false
     t.string "password_digest"
     t.string "remember_digest"
-    t.datetime "created_at", default: "2019-02-01 09:17:25", null: false
+    t.datetime "created_at", default: "2019-02-15 05:48:32", null: false
     t.datetime "updated_at"
   end
 

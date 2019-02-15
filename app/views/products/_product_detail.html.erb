@@ -19,10 +19,10 @@
       <%= form_for OrderDetail.new do |f| %>
       <%= f.hidden_field :quantity, value: 1, class: "form-control", min: 1 %>
       <%= f.hidden_field :product_id, value: @products.id %>
+      <% if (@products.status == "in stock")%>
       <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+      <%end%>
       <% end %>
     </div>
   </div>
 </div>
-
-

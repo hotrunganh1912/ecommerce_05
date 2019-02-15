@@ -2,3 +2,21 @@
   <%= render "shopping_cart" %>
   <h4 class="text-right"><%= t".total_price"%><span style="color: green"><%= number_to_currency current_order.total_price %></span></h4>
 </div>
+<div class="col-xs-12 text-right">
+  <div class="container">
+    <div class="row">
+      <%= form_for current_order, method: :patch do |f| %>
+        <%= f.hidden_field :status, value: "pending" %>
+        <%= button_tag( "confirm",class: "btn btn-default") do %>
+          <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+          <span><strong>confirm</strong></span>
+        <% end %>
+        <%= f.hidden_field :status, value: "close" %>
+        <%= button_tag( "confirm",class: "btn btn-default") do %>
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          <span><strong>DELETE</strong></span>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+

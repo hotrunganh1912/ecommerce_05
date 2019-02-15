@@ -1,3 +1,16 @@
-<div class="shopping-cart">
-  <%= render "history" %>
+<div class="container">
+  <h2>Your Order</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id Orders</th>
+        <th>Time</th>
+        <!-- <th>Action</th> -->
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+    <%= render "history" %>
+    </tbody>
+  </table>
 </div>
