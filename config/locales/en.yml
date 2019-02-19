@@ -62,4 +62,7 @@ en:
   products:
     product:
       add_to_card: "Add to card"
-
+      in_stock: "in stock"
+      on_of_stock: "on of stock"
+    slider_search_box:
+      logo: "Rails logo"

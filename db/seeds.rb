@@ -58,6 +58,7 @@ Product.create!(categorie_id: 3,
                 color:"red",
                 price_in:30000,
                 price_out:price_out,
+                status: rand(0..1),
                 price_sale:0,
                 new:"true",
                 quantity: 1,
@@ -74,6 +75,7 @@ end
                 price_in:30000 + c,
                 price_sale:10,
                 price_out:30000 * 10 / 100,
+                status: rand(0..1),
                 new:"true",
                 quantity: 1,
                 trend:"false")
@@ -89,6 +91,7 @@ end
                 price_in:1000 + d,
                 price_sale:10,
                 price_out:1000 * 10 / 100,
+                status: rand(0..1),
                 new:"true",
                 quantity: 1,
                 trend:"false")
