@@ -66,3 +66,77 @@ en:
       on_of_stock: "on of stock"
     slider_search_box:
       logo: "Rails logo"
+  devise:
+    confirmation:
+      content: "Resend confirmation instructions"
+      sub: "Resend confirmation instructions"
+      email_field: Email
+    sessions:
+      new:
+        page_title: "Log in"
+        content: "Log in"
+        remember_me: "Remember me on this computer"
+        bn_login: "Log in"
+    unlocks:
+      new:
+        page_title: "Resend unlock instructions"
+        content: "Resend unlock instructions"
+    shared:
+      links:
+        log_in: "Log in"
+        sin_up: "Sin up"
+        forget_pass: "Forgot your password?"
+        did_not_receive: "Didn't receive confirmation instructions?"
+        unlock: "Didn't receive unlock instructions?"
+    registrations:
+      edit:
+        page_title: "Edit account"
+        content: "Edit "
+        leadve_blank: "(leave blank if you don't want to change it)"
+        minimum: "characters minimum"
+        confirm_pass: "(we need your current password to confirm your changes)"
+        cancel_acc: "Cancel my account"
+        Unhappy: "Unhappy?"
+        btn_cancel: "Cancel my account"
+        confirm_bnt_cancel: "Are you sure?"
+        back: "Back"
+      new:
+        page_title: "Sign up"
+        content: "Sign up"
+        minimum: "characters minimum"
+        btn_sign_up: "Sign up"
+    passwords:
+      edit:
+        page_title: "Change your password"
+        content: "Change your password"
+        lab: "New password"
+        lab_confirm: "Confirm new password"
+        btn: "Change my password"
+      new:
+        page_title: "Forgot your password?"
+        content: "Forgot your password?"
+        btn_send: "Send me reset password instructions"
+    mailer:
+      confirmation_instruction:
+        content: "Welcome"
+        content2: "You can confirm your account email through the link below:"
+        text_link_to: "Confirm my account"
+      email_changed:
+        content: "Hello"
+        content2: "We're contacting you to notify you that your email is being changed to"
+        content3: We're contacting you to notify you that your email has been changed to
+      password_change:
+        content: "Hello"
+        content2: "We're contacting you to notify you that your password has been changed."
+      reset_password_instructions:
+        content: "Hello"
+        content2: "Someone has requested a link to change your password. You can do this through the link below."
+        link_to: "Change my password"
+        content3: "If you didn't request this, please ignore this email."
+        content4: "Your password won't change until you access the link above and create a new one."
+      unlock_instructions:
+        content: "Hello"
+        content2: "Your account has been locked due to an excessive number of unsuccessful sign in attempts."
+        content3: "Click the link below to unlock your account:"
+        link_to: "Unlock my account"
+
