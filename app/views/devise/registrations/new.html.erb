@@ -11,6 +11,26 @@
     </div>
 
     <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, autocomplete: "name",class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :sex %><br />
+      <%= f.select(:sex, User.sexes.keys.map {|sex| [sex.titleize,sex]}) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address %><br />
+      <%= f.text_field :address, autocomplete: "address",class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :phone %><br />
+      <%= f.phone_field  :phone, autocomplete: "phone",class: "form-control" %>
+    </div>
+
+    <div class="field">
       <%= f.label :password %>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> <%= t".minimum" %>)</em>
