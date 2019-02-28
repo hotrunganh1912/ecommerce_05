@@ -1,0 +1,50 @@
+<%= search_form_for @search do |f| %>
+<div class="input-daterange">
+  <div>
+    <%= f.label :manufacture_date_from %>
+    <%= f.text_field :updated_at_gteq, placeholder: "Manufacture date from", type: "date",class: "form-control" %>
+  </div>
+  <div>
+    <%= f.label :manufacture_date_to %>
+    <%= f.text_field :updated_at_lteq,  placeholder: "Manufacture date to", type: "date",class: "form-control" %>
+  </div>
+</div>
+<%= button_tag( :class => "btn btn-default") do %>
+<i class="glyphicon glyphicon-search"></i>
+<% end %>
+<% end %>
+
+<table class="table">
+  <thead>
+    <th>Update</th>
+    <th>Total price</th>
+    <th>Status</th>
+    <th>Action</th>
+    <th>Show</th>
+  </thead>
+  <tbody>
+    <% @orders = @orders.select{ |order| order.user_id == current_user.id } %>
+
+    <% @orders.each do |order| %>
+      <tr class=<%= class_table order %> >
+        <td><%= order.updated_at %></td>
+        <td><%= number_to_currency order.total_price %></td>
+        <td><%= order.status %></td>
+        <% if order.pending? %>
+          <%= form_for order, method: :patch do |f| %>
+            <%= f.hidden_field :status, value: "close" %>
+              <td><%= button_tag( "deytrol",class: "btn btn-default") do %>
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                <span><strong>cancel</strong></span>
+                <% end %>
+              </td>
+            <% end %>
+        <% else %>
+            <td><p>...</p></td>
+          <% end %>
+        <td><%= link_to "view" ,order_path(@orders) %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>

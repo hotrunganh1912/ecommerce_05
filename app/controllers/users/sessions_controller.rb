@@ -11,7 +11,7 @@ class Users::SessionsController < Devise::SessionsController
   # POST /resource/sign_in
   def create
     super
-    return check_order_open if Order.find_by(users_id: current_user.id,
+    return check_order_open if Order.find_by(user_id: current_user.id,
      status: "open").present?
   end
 
@@ -29,7 +29,7 @@ class Users::SessionsController < Devise::SessionsController
   private
 
   def check_order_open
-    order = Order.find_by(users_id: current_user.id, status: "open")
+    order = Order.find_by(user_id: current_user.id, status: "open")
     session[:order_id] = order.id
   end
 end

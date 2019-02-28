@@ -5,13 +5,24 @@ class OrdersController < ApplicationController
     @order.save
     flash[:success] = "Successfully order "
     session.delete(:order_id)
-    redirect_to root_path
+    redirect_back fallback_location: root_path
+  end
+
+  def index
+    @search = Order.ransack params[:q]
+    @orders = @search.result
+    Order.select(:parent_id).joins(:category_coaches)
+  end
+
+  def show
+    orders = Order.find_by(id: params[:id])
+    @order_details = orders.order_details
   end
 
   private
 
   def load_order_current
-    @order = Order.find_by(id: current_order.id)
+    @order = Order.find_by(id: params[:id])
   end
 
 

@@ -7,7 +7,7 @@
     <div class="row">
       <%= form_for current_order, method: :patch do |f| %>
         <%= f.hidden_field :status, value: "pending" %>
-        <%= button_tag( "confirm",class: "btn btn-default") do %>
+        <%= button_tag( "confirm", :data => {:confirm => 'Are you sure?'} ,class: "btn btn-default") do %>
           <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
           <span><strong>confirm</strong></span>
         <% end %>

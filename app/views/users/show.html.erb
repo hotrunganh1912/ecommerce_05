@@ -1,0 +1,41 @@
+<% provide(:title, t(".page_title")) %>
+<h1><%= t(".content") %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@users,url:user_path(@users),html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: @users %>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+
+    <div class="field">
+      <%= f.label :sex %><br />
+      <%= f.select(:sex, User.sexes.keys.map {|sex| [sex.titleize, sex]}, :selected_value => User.sexes, class: "form-control" )%>
+    </div>
+
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, autocomplete: "name",class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address %><br />
+      <%= f.text_field :address, autocomplete: "address",class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :phone %><br />
+      <%= f.phone_field  :phone, autocomplete: "phone",class: "form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Update",class: "btn btn-primary" %>
+    </div>
+    <% end %>
+
+  </div>
+</div>
+<%= link_to t(".back"), :back %>

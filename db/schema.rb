@@ -15,14 +15,14 @@ ActiveRecord::Schema.define(version: 2019_02_18_005647) do
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.integer "parent_id"
-    t.datetime "created_at", default: "2019-02-18 01:06:37", null: false
+    t.datetime "created_at", default: "2019-02-28 01:56:07", null: false
     t.datetime "updated_at"
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.integer "products_id"
-    t.datetime "created_at", default: "2019-02-18 01:06:37", null: false
+    t.datetime "created_at", default: "2019-02-28 01:56:07", null: false
     t.datetime "updated_at"
   end
 
@@ -31,16 +31,16 @@ ActiveRecord::Schema.define(version: 2019_02_18_005647) do
     t.integer "product_id"
     t.float "price"
     t.integer "quantity"
-    t.datetime "created_at", default: "2019-02-18 01:06:37", null: false
+    t.datetime "created_at", default: "2019-02-28 01:56:07", null: false
     t.datetime "updated_at"
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "users_id"
+    t.integer "user_id"
     t.float "total_price"
     t.integer "status", default: 0, null: false
     t.integer "close_at"
-    t.datetime "created_at", default: "2019-02-18 01:06:37", null: false
+    t.datetime "created_at", default: "2019-02-28 01:56:07", null: false
     t.datetime "updated_at"
   end
 
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2019_02_18_005647) do
     t.boolean "new"
     t.integer "quantity"
     t.boolean "trend", default: false
-    t.datetime "created_at", default: "2019-02-18 01:06:37", null: false
+    t.datetime "created_at", default: "2019-02-28 01:56:07", null: false
     t.datetime "updated_at"
   end
 
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 2019_02_18_005647) do
     t.integer "user_id"
     t.integer "product_id"
     t.integer "value_rate"
-    t.datetime "created_at", default: "2019-02-18 01:06:37", null: false
+    t.datetime "created_at", default: "2019-02-28 01:56:07", null: false
     t.datetime "updated_at"
   end
 

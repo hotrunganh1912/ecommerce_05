@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     else
       @current_user = current_user
       if !@current_user.blank?
-        Order.new(users_id: @current_user.id)
+        Order.new(user_id: @current_user.id)
       else
         Order.new
       end

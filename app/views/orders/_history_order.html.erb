@@ -1,0 +1,27 @@
+<% if !@order_item.nil? && @order_item.errors.any? %>
+<div class="alert alert-danger">
+  <ul>
+    <% @order_item.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+
+<table class="table">
+  <thead>
+    <th>Product name</th>
+    <th>Quantity</th>
+    <th>Price</th>
+  </thead>
+  <tbody>
+    <% @order_details.each do |order_details| %>
+    <tr>
+      <td><%= order_details.product.name %></td>
+      <td><%= order_details.quantity %></td>
+      <td><%= order_details.price %> </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
